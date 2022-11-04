@@ -4,7 +4,7 @@ from watchdog.events import FileSystemEventHandler
 # создадим класс Observer-а с мотодом выполняющимся при условии выполнения каких либо дейстивий в объекте
 class Watcher(FileSystemEventHandler):
     def on_modified(self, event):
-            with open("wfile.txt", "r") as file:
+            with open("wfile.txt", "r", encoding='utf8') as file:
                 print(file.readlines()[-1])
 
 
